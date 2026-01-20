@@ -11,7 +11,10 @@ class ServiceCards extends StatelessWidget {
           child: _ServiceCard(
             title: "Hospitals",
             icon: Icons.local_hospital,
-            gradient: [Colors.orange.shade200, Colors.orange.shade100],
+            gradient: [
+              const Color.fromARGB(255, 241, 92, 92),
+              const Color.fromARGB(255, 250, 62, 62),
+            ],
           ),
         ),
         const SizedBox(width: 12),

@@ -4,6 +4,8 @@ import 'package:pulse_ai/screens/landing/widgets/bottom_action_bar.dart';
 import 'package:pulse_ai/screens/landing/widgets/service_cards.dart';
 import '../../widgets/app_drawer.dart';
 import 'widgets/typing_greeting.dart';
+import './widgets/gradient_background.dart';
+
 // import 'widgets/diagnostic_button.dart';
 //import 'widgets/emergency_button.dart';
 
@@ -28,34 +30,36 @@ class LandingScreen extends StatelessWidget {
             padding: const EdgeInsets.only(right: 12),
             child: CircleAvatar(
               radius: 18,
-              backgroundImage: const AssetImage("../../assets/image.PNG"),
+              backgroundImage: const AssetImage("assets/image.PNG"),
             ),
           ),
         ],
       ),
 
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            const SizedBox(height: 16),
+      body: GradientBackground(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              const SizedBox(height: 16),
 
-            const TypingGreeting(text: "Hello,\nAlicia Wins 👋"),
+              const TypingGreeting(text: "Hello,\nAlicia Wins 👋"),
 
-            const SizedBox(height: 24),
+              const SizedBox(height: 24),
 
-            const AmbulanceButton(),
+              const AmbulanceButton(),
 
-            const SizedBox(height: 24),
+              const SizedBox(height: 24),
 
-            const ServiceCards(),
+              const ServiceCards(),
 
-            const Spacer(),
+              const Spacer(),
 
-            const BottomActionBar(),
+              const BottomActionBar(),
 
-            const SizedBox(height: 16),
-          ],
+              const SizedBox(height: 16),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_ai/screens/emergency/emergency_choice_screen.dart';
 
 class BottomActionBar extends StatelessWidget {
   const BottomActionBar({super.key});
@@ -33,7 +34,12 @@ class BottomActionBar extends StatelessWidget {
               ),
               iconSize: 28,
               onPressed: () {
-                // emergency flow later
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const EmergencyChoiceScreen(),
+                  ),
+                );
               },
             ),
           ),
